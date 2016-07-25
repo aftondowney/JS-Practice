@@ -1,16 +1,16 @@
 function processData(input) {
     //Enter your code here
     var input_array = input.split('\n');
-    var cost = input_array[0];
-    var tipPercent = input_array[1];
-    var taxPercent = input_array[2];
-    var tip = cost * (tipPercent\100);
-    var tax = cost * (taxPercent\100);
-    var totalCost = cost + tip + tax;
+    var cost = parseFloat(input_array[0]);
+    var tipAmount = parseInt(input_array[1]);
+    var taxAmount = parseInt(input_array[2]);
+    var tip = cost * (tipAmount / 100);
+    var tax = cost * (taxAmount/100);
+    var totalCost = (cost + tip + tax);
+    totalCost = Math.round(totalCost);
 
     console.log("The total meal cost is " + totalCost + " dollars.");
-} 
-
+}
 process.stdin.resume();
 process.stdin.setEncoding("ascii");
 _input = "";
