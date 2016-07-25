@@ -1,9 +1,9 @@
 function weird(n) {
-    if ((n % 2 === 0) && (1 < n < 6) ) {
+    if ((n % 2 === 0) && (2 <= n <= 5)) {
         return "Not Weird";
-    } else if(n% 2 === 0) && (5 < n < 21) {
+    } else if((n % 2 === 0) && (6 <= n <= 20)) {
         return "Weird";
-    } else if(n % 2 === 0) && (n > 20) {
+    } else if((n % 2 === 0) && (n > 20)) {
         return "Not Weird";
     } else {
         return "Weird";
